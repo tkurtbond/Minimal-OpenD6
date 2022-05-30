@@ -17,12 +17,12 @@ rules incorporated, this should be a great starting point.
 Why start with *Minimal OpenD6* instead of of *OpenD6*?  Because you
 want to start with a minimal core and add things gradually, rather
 than starting with a very large document and cutting out everything
-you don't want!
+you don't want!  (Different approaches work better for different folks.)
 
 *Minimal OpenD6* provides
 [reStructuredText](https://docutils.sourceforge.io/rst.html) source
 for the document, as well as simple PDF, HTML, EPUB, Microsoft Word
-`.docx`, and OpenOffice/LibreOffice `.odt` output.  Conversions to
+`.docx`, OpenOffice/LibreOffice `.odt`, and Markdown output.  Conversions to
 other formats are possible using [pandoc](https://pandoc.org/) or
 other means.
 
