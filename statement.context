@@ -1,0 +1,259 @@
+$if(context-lang)$
+\mainlanguage[$context-lang$]
+$endif$
+$if(context-dir)$
+\setupalign[$context-dir$]
+\setupdirections[bidi=on,method=two]
+$endif$
+% Enable hyperlinks
+\setupinteraction
+  [state=start,
+$if(title)$
+  title={$title$},
+$endif$
+$if(subtitle)$
+  subtitle={$subtitle$},
+$endif$
+$if(author)$
+  author={$for(author)$$author$$sep$; $endfor$},
+$endif$
+$if(keywords)$
+  keyword={$for(keywords)$$keywords$$sep$; $endfor$},
+$endif$
+  style=$linkstyle$,
+  color=$linkcolor$,
+  contrastcolor=$linkcontrastcolor$]
+
+% make chapter, section bookmarks visible when opening document
+\placebookmarks[chapter, section, subsection, subsubsection, subsubsubsection, subsubsubsubsection][chapter, section]
+\setupinteractionscreen[option={bookmark,title}]
+\setuptagging[state=start]
+
+$if(papersize)$
+\setuppapersize[$for(papersize)$$papersize$$sep$,$endfor$]
+$else$
+\setuppapersize[letter]
+$endif$
+$if(layout)$
+\setuplayout[$for(layout)$$layout$$sep$,$endfor$]
+$else$
+%% https://wiki.contextgarden.net/Layout#Typesetting_areas
+\setuplayout[
+  backspace=0.5in,
+  width=4.5in,
+  topspace=0.4in,
+  top=0in,
+  topdistance=0in,
+  header=0in,
+  headerdistance=0in,
+  bottom=0.0in,
+  bottomdistance=0.0in,
+  footer=0.25in,
+  footerdistance=0.05in,
+  %%height=7.75in
+  height=7.9in
+  ]
+$endif$
+$if(pagenumbering)$
+\setuppagenumbering[$for(pagenumbering)$$pagenumbering$$sep$,$endfor$]
+$else$
+\setuppagenumbering[location={footer,middle}]
+$endif$
+$if(pdfa)$
+% attempt to generate PDF/A
+\setupbackend
+  [format=PDF/A-$pdfa$,
+   profile={$if(pdfaiccprofile)$$for(pdfaiccprofile)$$pdfaiccprofile$$sep$,$endfor$$else$sRGB.icc$endif$},
+   intent=$if(pdfaintent)$$pdfaintent$$else$sRGB IEC61966-2.1$endif$]
+$endif$
+$if(export)$
+\setupbackend[export=yes]
+$endif$
+\setupstructure[state=start,method=auto]
+
+% use microtypography
+\definefontfeature[default][default][script=latn, protrusion=quality, expansion=quality, itlc=yes, textitalics=yes, onum=yes, pnum=yes]
+\definefontfeature[default:tnum][default][tnum=yes, pnum=no] % change
+\definefontfeature[smallcaps][script=latn, protrusion=quality, expansion=quality, smcp=yes, onum=yes, pnum=yes]
+\setupalign[hz,hanging]
+\setupitaliccorrection[global, always]
+
+\setupbodyfontenvironment[default][em=italic] % use italic as em, not slanted
+
+\definefontfeature[default][default][onum=no]
+\definefallbackfamily[mainface][rm][CMU Serif][preset=range:greek, force=yes]
+\definefallbackfamily[mainface][rm][Symbola][range={playingcards,miscellaneoussymbols},force=yes]
+\definefallbackfamily[mainface][ss][Symbola][range={playingcards,miscellaneoussymbols},force=yes]
+\definefontfamily[mainface][rm][$if(mainfont)$$mainfont$$else$Latin Modern Roman$endif$]
+\definefontfamily[mainface][mm][$if(mathfont)$$mathfont$$else$Latin Modern Math$endif$]
+\definefontfamily[mainface][ss][$if(sansfont)$$sansfont$$else$Latin Modern Sans$endif$]
+\definefontfamily[mainface][tt][$if(monofont)$$monofont$$else$Latin Modern Typewriter$endif$][features=none]
+\definepapersize[statement][height=8.5in,width=5.5in]
+\setuppapersize[statement][statement]
+
+\setupbodyfont[mainface$if(fontsize)$,$fontsize$$else$10pt$endif$]
+
+\setupwhitespace[$if(whitespace)$$whitespace$$else$medium$endif$]
+$if(indenting)$
+\setupindenting[$for(indenting)$$indenting$$sep$,$endfor$]
+$endif$
+$if(interlinespace)$
+\setupinterlinespace[$for(interlinespace)$$interlinespace$$sep$,$endfor$]
+$endif$
+
+\setuphead[chapter]            [style=\bfd,header=empty,grid=no]
+\setuphead[section]            [style=\bfc,after={},before={},grid=no]
+\setuphead[subsection]         [style=\bfb,after={},before={},grid=no]
+\setuphead[subsubsection]      [style=\bfa,after={},before={},grid=no]
+\setuphead[subsubsubsection]   [style=\sc,after={},before={},grid=no]
+\setuphead[subsubsubsubsection][style=\it,after={},before={},grid=no]
+\setupcolumns[grid=no]
+
+$if(headertext)$
+\setupheadertexts$for(headertext)$[$headertext$]$endfor$
+$endif$
+$if(footertext)$
+\setupfootertexts$for(footertext)$[$footertext$]$endfor$
+$endif$
+$if(number-sections)$
+$else$
+\setuphead[chapter, section, subsection, subsubsection, subsubsubsection, subsubsubsubsection][number=no]
+$endif$
+$if(twocol)$
+\definecolumnset[twocol][n=2]
+$endif$
+\definedescription
+  [description]
+  [headstyle=bold, style=normal, location=hanging, width=broad, margin=1cm, alternative=hanging]
+
+\setupitemize[autointro]    % prevent orphan list intro
+\setupitemize[indentnext=no]
+$if(setupitemize)$
+\setupitemize[$setupitemize$]
+$endif$
+
+
+%%% Trying to get a better glyph for bullet, because the one in AlegreyaSans
+%%% is just too small!
+%%% %\definesymbol[bigsquare][{\scale[height=.8\bodyfontsize]{\square}}]
+%%% %\setupitemize[symbol=bigsquare]
+%%% %\definesymbol[mysymbol][{\scale[height=.8\bodyfontsize]{▶}}]
+%%% %\definesymbol[mysymbol][{\scale[width=.8\bodyfontsize]{•}}]
+%%% %\definesymbol[mysymbol][{●}] % doesn't work
+%%% %\setupitemize[symbol=mysymbol]
+%\definesymbol[mysymbol][{\scale[height=.35\bodyfontsize]{⚫}}] %about right
+%\setupitemize[1][symbol=mysymbol]
+
+
+\defineitemgroup[enumerate]
+\setupenumerate[each][fit][itemalign=left,distance=.5em,style={\feature[+][default:tnum]}]
+
+%\setupfloat[figure][default={here,nonumber}]
+%\setupfloat[table][default={here,nonumber}]
+
+% Turn on numbering of captions by default, but let the user choose.
+\setupcaption[figure][number=$if(number-figures)$$number-figures$$else$yes$endif$]
+\setupcaption[table][number=$if(number-tables)$$number-tables$$else$yes$endif$]
+
+\setupfloat[table][default={$if(location)$$location$$else$here$endif$}]
+\setupfloat[table][default={$if(location)$$location$$else$here$endif$}]
+
+\setupthinrules[width=15em] % width of horizontal rules
+
+\startuseMPgraphic{xtablerow}
+     fill OverlayBox withcolor "gray";
+\stopuseMPgraphic
+
+\defineoverlay
+   [xtablerow]
+   [\ifodd\currentxtablerow
+      \useMPgraphic{xtablerow}%
+      \fi]
+
+\setupxtable[frame=off,background=xtablerow]
+\setupxtable[row][1][topframe=on,bottomframe=on,framecolor=black,rulethickness=0.75pt]
+\setupTABLE[row][last][bottomframe=on,framecolor=black,rulethickness=0.75pt]
+\setupxtable[head][topframe=on,bottomframe=on]
+\setupxtable[foot][bottomframe=on]
+
+% \definecolor[tablebackground][r=.8,g=.8,b=.8]
+% \setupxtable[body][]
+% \setupxtable[background=color,frame=off]
+% \setupxtable[row][odd][backgroundcolor=tablebackground]
+% \setupxtable[head][topframe=on,bottomframe=on]
+% \setupxtable[foot][bottomframe=on]
+
+$if(csl-refs)$
+\definemeasure[cslhangindent][1.5em]
+\definenarrower[hangingreferences][left=\measure{cslhangindent}]
+\definestartstop [cslreferences] [
+	$if(csl-hanging-indent)$
+	before={%
+	  \starthangingreferences[left]
+      \setupindenting[-\leftskip,yes,first]
+      \doindentation
+  	},
+  	after=\stophangingreferences,
+	$endif$
+]
+$endif$
+$if(includesource)$
+$for(sourcefile)$
+\attachment[file=$curdir$/$sourcefile$,method=hidden]
+$endfor$
+$endif$
+$for(header-includes)$
+$header-includes$
+$endfor$
+
+\starttext
+$if(title)$
+\startalignment[middle]
+  {\bfd\setupinterlinespace $title$}
+$if(subtitle)$
+  \smallskip
+  {\tfa\setupinterlinespace $subtitle$}
+$endif$
+$if(author)$
+  \smallskip
+  {\tfa\setupinterlinespace $for(author)$$author$$sep$\crlf $endfor$}
+$endif$
+$if(date)$
+  \smallskip
+  {\tfa\setupinterlinespace $date$}
+$endif$
+  \bigskip
+\stopalignment
+$endif$
+$if(abstract)$
+\midaligned{\it Abstract}
+\startnarrower[2*middle]
+$abstract$
+\stopnarrower
+\blank[big]
+$endif$
+$for(include-before)$
+$include-before$
+$endfor$
+$if(twocol)$
+\startcolumnset[twocol]
+$endif$
+$if(toc)$
+\completecontent
+$endif$
+$if(lof)$
+\completelistoffigures
+$endif$
+$if(lot)$
+\completelistoftables
+$endif$
+
+$body$
+
+$for(include-after)$
+$include-after$
+$endfor$
+$if(twocol)$
+\stopcolumnset
+$endif$
+\stoptext

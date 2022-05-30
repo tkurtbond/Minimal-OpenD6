@@ -1,0 +1,17 @@
+span.title-ref {
+    font-style: italic;
+}
+
+div.box {
+    border: solid;
+    border-width: thin;
+    padding: 5pt;
+}
+
+div.box p:first-of-type {
+    margin-top: 0;
+}
+
+div.box p:last-of-type {
+    margin-bottom: 0;
+}

@@ -1,0 +1,157 @@
+.\" Pass "--pdf-engine-opt=-P-p8.5i,5.5i" to pandoc for this template.
+.\" **** Custom macro definitions *********************************
+.\" colors
+.color
+.defcolor red rgb 1 0 0
+.defcolor green rgb 0 1 0
+.defcolor blue rgb 0 0 1
+.\" * Super/subscript
+.\" (https://lists.gnu.org/archive/html/groff/2012-07/msg00046.html)
+.ds { \v'-0.3m'\\s[\\n[.s]*9u/12u]
+.ds } \s0\v'0.3m'
+.ds < \v'0.3m'\s[\\n[.s]*9u/12u]
+.ds > \s0\v'-0.3m'
+.\" * Horizontal line
+.de HLINE
+.LP
+.ce
+\l'20'
+..
+$if(highlighting-macros)$
+.\" * Syntax highlighting macros
+$highlighting-macros$
+$endif$
+.\" **** Settings *************************************************
+.special S Symbola
+.pl 8.5i
+.\" text width
+.nr LL 4.5i
+.\" left margin
+.nr PO 0.5i
+.\" top margin
+.nr HM 0.35i
+.\" bottom margin
+.nr FM 0.75i
+.\" header/footer width
+.nr LT \n[LL]
+.\" point size
+.nr PS $if(pointsize)$$pointsize$$else$10p$endif$
+.\" line height
+.nr VS $if(lineheight)$$lineheight$$else$12p$endif$
+.\" font family: A, BM, H, HN, N, P, T, ZCM
+.fam $if(fontfamily)$$fontfamily$$else$T$endif$
+.\" paragraph indent: I originally had 2m, but others convinced me no indent
+.\" with inter-paragraph space was more readable.
+.nr PI $if(indent)$$indent$$else$0m$endif$
+.\" Quote indent
+.nr QI $if(quoteindent)$$quoteindent$$else$2n$endif$
+.\" interparagraph space
+.nr PD $if(interpara)$$interpara$$else$0.33v$endif$
+.\" footnote width
+.nr FL \n[LL]
+.\" footnote point size
+.nr FPS (\n[PS] - 2000)
+.\" footnote mode
+.nr FF 3
+.\" footnote ratio
+.ds FR 1
+$if(papersize)$
+.\" paper size
+.ds paper $papersize$
+$endif$
+.\" color used for strikeout
+.defcolor strikecolor rgb 0.7 0.7 0.7
+.\" color for links (rgb)
+.ds PDFHREF.COLOUR   0.35 0.00 0.60
+.\" border for links (default none)
+.ds PDFHREF.BORDER   0 0 0
+.\" point size difference between heading levels
+.\" ---------------------------------------------------------------
+$if(usegrowps)$
+.\" A bug in in the groff -ms macros makes indentation in .IP odd
+.\" after .SH if using PSINCR and GROWPS.
+.\" point size difference between heading levels
+.nr PSINCR $if(psincr)$$psincr$$else$3p$endif$
+.\" heading level above which point size no longer changes
+.nr GROWPS $if(growps)$$growps$$else$3$endif$
+.\" ----------------------------------------------------------------------
+.\" The title looks too small if we're using GROWPS, so adjust its size.
+.\" 
+.de TL
+.br
+.als TL cov*err-not-again
+.rn @AB AB
+.rn @AU AU
+.rn @AI AI
+.di cov*tl-div
+.par@reset
+.ft B
+.nr tkb-psincr (\\n[PSINCR]*\\n[GROWPS])+2p
+.ps +\\n[tkb-psincr]u
+.vs +\\n[PSINCR]u*2u    \" was +6p, but try to adapt to other values of PSINCR.
+.\" ll (u;\\n[LL]*5/6)  \" Try a wider title
+.ll (u;\\n[LL])
+.nr cov*n-au 0
+.DEVTAG-TL
+..
+.\" ----------------------------------------------------------------------
+$endif$
+.\" comment these out if you want a dot after section numbers:
+.als SN SN-NO-DOT
+.als SN-STYLE SN-NO-DOT
+.\" page numbers in footer, centered
+.rm CH
+.ds CF %
+.\" pdf outline fold level
+.nr PDFOUTLINE.FOLDLEVEL 3
+.\" start out in outline view
+.pdfview /PageMode /UseOutlines
+.\" ***************************************************************
+.\" PDF metadata
+.pdfinfo /Title "$title-meta$"
+.pdfinfo /Author "$author-meta$"
+$if(adjusting)$
+.ad $adjusting$
+$endif$
+$if(hyphenate)$
+.hy
+$else$
+.nh \" Turn off hyphenation by default.
+$endif$
+$if(has-inline-math)$
+.EQ
+delim @@
+.EN
+$endif$
+$for(header-includes)$
+$header-includes$
+$endfor$
+$if(title)$
+.TL
+$title$
+$endif$
+$for(author)$
+.AU
+$author$
+$endfor$
+$if(date)$
+.ND "$date$"
+$endif$
+$if(abstract)$
+.AB
+$abstract$
+.AE
+$endif$
+.\" 1 column (use .2C for two column)
+.1C
+$for(include-before)$
+$include-before$
+$endfor$
+$body$
+$if(toc)$
+.TC
+$endif$
+$for(include-after)$
+$include-after$
+$endfor$
+.pdfsync
