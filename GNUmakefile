@@ -397,5 +397,5 @@ clean:
 		$(OUT)*.gen.md $(OUT)*.rtf $(OUT)*.rst
 
 release: all
-	cd $(OUT) && zip ../../minimal-opend6-output-$$(date '+%F').zip *
+	cd $(OUT) && zip ../../minimal-opend6-srd-$$(git describe --tags)-$$(date '+%F').zip *
 
