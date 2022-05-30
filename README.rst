@@ -54,7 +54,7 @@ with the full `OpenD6` and cutting out what you don't want.
 
 Pre-built output is found in the `output <output>`_ directory, or you
 can download all the pre-built output formats from the `releases
-<releases>` page.
+<releases>`_ page.
 
 If you just want the output files without any of the stuff used to
 build them, look at the `releases
