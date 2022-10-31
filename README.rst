@@ -36,7 +36,7 @@ new game.  It provides:
 * Markdown source, converted from the reStructuredText_ source by
   pandoc_.
 
-__ https://docutils.sourceforge.io/rst.html
+.. _ https://docutils.sourceforge.io/rst.html
 .. _ODT: https://en.wikipedia.org/wiki/OpenDocument
 
 Using pandoc_, the reStructuredText_ source can also be transformed
