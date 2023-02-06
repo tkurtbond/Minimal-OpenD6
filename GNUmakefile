@@ -155,14 +155,14 @@ endif
 
 $(OUT)%.ms.pdf : %.rst
 	$(PANDOC) -s -r rst -w ms --lua-filter=general.lua \
-		--variable=twocol --variable=usegrowps $(MSVARIABLES) \
+		--variable=twocolumns --variable=usegrowps $(MSVARIABLES) \
 		--variable=fontfamily=$(MSFONTFAMILY) \
 		$(FLOAT) $(PANDOCOPTS) \
 		--template=tkb --output=$@ $<
 
 $(OUT)%.gen.ms : %.rst
 	$(PANDOC) -s -r rst -w ms --lua-filter=general.lua \
-		--variable=twocol --variable=usegrowps $(MSVARIABLES) \
+		--variable=twocolumns --variable=usegrowps $(MSVARIABLES) \
 		--variable=fontfamily=$(MSFONTFAMILY) \
 		$(FLOAT) $(PANDOCOPTS) \
 		--template=tkb --output=$@ $<
