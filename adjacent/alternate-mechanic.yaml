@@ -1,0 +1,9 @@
+---
+- Archetype: Mechanic
+  Might: [2D+1]
+  Agility: [3D+1, [Dodge, 5D], [Pilot, 4D]]
+  Wit: [3D+2, [Computer, 6D], [Navigation, 4D+1], [Repair, 6D+1]]
+  Charm: [2D+2, [Diplomacy, 3D]]
+  Static: [[Dodge, 15], [Block, 7], [Parry, 7], [Soak, 7]]
+  Perks: []
+  Gear: ["Light Pistol"]
