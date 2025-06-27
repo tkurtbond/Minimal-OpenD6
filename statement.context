@@ -72,7 +72,8 @@ $endif$
 \setupstructure[state=start,method=auto]
 
 % use microtypography
-\definefontfeature[default][default][script=latn, protrusion=quality, expansion=quality, itlc=yes, textitalics=yes, onum=yes, pnum=yes]
+%\definefontfeature[default][default][script=latn, protrusion=quality, expansion=quality, itlc=yes, textitalics=yes, onum=yes, pnum=yes]
+\definefontfeature[default][default][script=latn, protrusion=quality, expansion=quality, itlc=yes, textitalics=yes, onum=no, pnum=yes]
 \definefontfeature[default:tnum][default][tnum=yes, pnum=no] % change
 \definefontfeature[smallcaps][script=latn, protrusion=quality, expansion=quality, smcp=yes, onum=yes, pnum=yes]
 \setupalign[hz,hanging]
@@ -80,9 +81,8 @@ $endif$
 
 \setupbodyfontenvironment[default][em=italic] % use italic as em, not slanted
 
-\definefontfeature[default][default][onum=no]
 \definefallbackfamily[mainface][rm][CMU Serif][preset=range:greek, force=yes]
-\definefallbackfamily[mainface][rm][Symbola][range={playingcards,miscellaneoussymbols},force=yes]
+\definefallbackfamily[mainface][rm][Symbola][range={playingcards,miscellaneoussymbols,miscellaneoussymbolsandpictographs},force=yes]
 \definefallbackfamily[mainface][ss][Symbola][range={playingcards,miscellaneoussymbols},force=yes]
 \definefontfamily[mainface][rm][$if(mainfont)$$mainfont$$else$Latin Modern Roman$endif$]
 \definefontfamily[mainface][mm][$if(mathfont)$$mathfont$$else$Latin Modern Math$endif$]
@@ -101,11 +101,11 @@ $if(interlinespace)$
 \setupinterlinespace[$for(interlinespace)$$interlinespace$$sep$,$endfor$]
 $endif$
 
-\setuphead[chapter]            [style=\bfd,header=empty,grid=no]
+\setuphead[chapter]            [style=\bfd,header=empty,grid=no,page=no]
 \setuphead[section]            [style=\bfc,after={},before={},grid=no]
 \setuphead[subsection]         [style=\bfb,after={},before={},grid=no]
 \setuphead[subsubsection]      [style=\bfa,after={},before={},grid=no]
-\setuphead[subsubsubsection]   [style=\sc,after={},before={},grid=no]
+\setuphead[subsubsubsection]   [style=\bi,after={},before={},grid=no]
 \setuphead[subsubsubsubsection][style=\it,after={},before={},grid=no]
 \setupcolumns[grid=no]
 
@@ -132,56 +132,18 @@ $if(setupitemize)$
 \setupitemize[$setupitemize$]
 $endif$
 
-
-%%% Trying to get a better glyph for bullet, because the one in AlegreyaSans
-%%% is just too small!
-%%% %\definesymbol[bigsquare][{\scale[height=.8\bodyfontsize]{\square}}]
-%%% %\setupitemize[symbol=bigsquare]
-%%% %\definesymbol[mysymbol][{\scale[height=.8\bodyfontsize]{▶}}]
-%%% %\definesymbol[mysymbol][{\scale[width=.8\bodyfontsize]{•}}]
-%%% %\definesymbol[mysymbol][{●}] % doesn't work
-%%% %\setupitemize[symbol=mysymbol]
-%\definesymbol[mysymbol][{\scale[height=.35\bodyfontsize]{⚫}}] %about right
-%\setupitemize[1][symbol=mysymbol]
-
-
 \defineitemgroup[enumerate]
 \setupenumerate[each][fit][itemalign=left,distance=.5em,style={\feature[+][default:tnum]}]
 
-%\setupfloat[figure][default={here,nonumber}]
-%\setupfloat[table][default={here,nonumber}]
-
-% Turn on numbering of captions by default, but let the user choose.
-\setupcaption[figure][number=$if(number-figures)$$number-figures$$else$yes$endif$]
-\setupcaption[table][number=$if(number-tables)$$number-tables$$else$yes$endif$]
-
-\setupfloat[table][default={$if(location)$$location$$else$here$endif$}]
-\setupfloat[table][default={$if(location)$$location$$else$here$endif$}]
+\setupfloat[figure][default={here,nonumber}]
+\setupfloat[table][default={here,nonumber}]
 
 \setupthinrules[width=15em] % width of horizontal rules
 
-\startuseMPgraphic{xtablerow}
-     fill OverlayBox withcolor "gray";
-\stopuseMPgraphic
-
-\defineoverlay
-   [xtablerow]
-   [\ifodd\currentxtablerow
-      \useMPgraphic{xtablerow}%
-      \fi]
-
-\setupxtable[frame=off,background=xtablerow]
-\setupxtable[row][1][topframe=on,bottomframe=on,framecolor=black,rulethickness=0.75pt]
-\setupTABLE[row][last][bottomframe=on,framecolor=black,rulethickness=0.75pt]
+\setupxtable[frame=off]
 \setupxtable[head][topframe=on,bottomframe=on]
+\setupxtable[body][]
 \setupxtable[foot][bottomframe=on]
-
-% \definecolor[tablebackground][r=.8,g=.8,b=.8]
-% \setupxtable[body][]
-% \setupxtable[background=color,frame=off]
-% \setupxtable[row][odd][backgroundcolor=tablebackground]
-% \setupxtable[head][topframe=on,bottomframe=on]
-% \setupxtable[foot][bottomframe=on]
 
 $if(csl-refs)$
 \definemeasure[cslhangindent][1.5em]
