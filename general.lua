@@ -37,7 +37,7 @@ function Div(element)
    if element.classes and #element.classes > 0 then 
       if has_value(element.classes, 'for-format') then
          if not has_value(element.classes, FORMAT) then 
-            io.write('Something is missing here in format \"', FORMAT, '\".\n')
+            io.stderr:write('Something is missing here in format \"', FORMAT, '\".\n')
             -- io.write(tprint(element), '\n')
             return {}
             -- return {
@@ -47,14 +47,14 @@ function Div(element)
             --                'Something is missing here in format \"' ..
             --                FORMAT .. '\".')}))}
          else
-            io.write('Has something here in format \"', FORMAT, '\".\n')
+            io.stderr:write('Has something here in format \"', FORMAT, '\".\n')
          end
       elseif has_value(element.classes, 'box') then
          if FORMAT == 'ms' then 
             return {pandoc.RawBlock('ms', '.sp 0.2v\n.B1'), element,
                     pandoc.RawBlock('ms', '.sp 0.2v\n.B2\n.sp 0.2v') }
          elseif FORMAT == 'context' then
-            return {pandoc.RawBlock('context', '\\startframedtext[width=broad,rulethickness=0.75pt,offset=7pt,aligned=yes]'),
+            return {pandoc.RawBlock('context', '\\startframedtext[width=broad,rulethickness=0.75pt,offset=3pt,aligned=yes]'),
                     element,
                     pandoc.RawBlock('context', '\\stopframedtext{}') }
 
@@ -100,16 +100,16 @@ function Span(el)
          elseif FORMAT == 'html' then -- use CSS instead?
             table.insert(el.content, 1, pandoc.RawInline('html', '<cite>'))
             table.insert(el.content, pandoc.RawInline('html', '</cite>'))
-         -- elseif FORMAT == 'odt' then
-         --    has, i = has_value(el.classes, 'title-ref')
-         --    io.write ('Found a title-ref in \"' .. FORMAT .. '\" format.\n')
-         --    io.write('title-ref: ' .. el.classes[i] .. '\n')
-         --    -- io.write('old span:\n')
-         --    -- io.write(tprint (el, 2))
-         --    -- el.classes[i] = {"custom-sytle", el.classes[i]}
-         --    -- io.write('new span:\n')
-         --    -- io.write(tprint (el, 2))
-         --    -- io.write('\n')
+            -- elseif FORMAT == 'odt' then
+            --    has, i = has_value(el.classes, 'title-ref')
+            --    io.write ('Found a title-ref in \"' .. FORMAT .. '\" format.\n')
+            --    io.write('title-ref: ' .. el.classes[i] .. '\n')
+            --    -- io.write('old span:\n')
+            --    -- io.write(tprint (el, 2))
+            --    -- el.classes[i] = {"custom-sytle", el.classes[i]}
+            --    -- io.write('new span:\n')
+            --    -- io.write(tprint (el, 2))
+            --    -- io.write('\n')
          elseif FORMAT == 'epub' then -- do nothing, epub does it with css.
          else
             io.write('Format \"', FORMAT, '\" title-ref unimplemented.\n')
@@ -223,7 +223,6 @@ function Span(el)
          else
             io.write ('Format \"', FORMAT, '\" green unimplemented.\n')
          end
-      end
       elseif has_value(el.classes, 'blue') then
          if FORMAT == 'ms' then
             if not color_seen then
@@ -250,6 +249,60 @@ function Span(el)
          else
             io.write ('Format \"', FORMAT, '\" blue unimplemented.\n')
          end
+      elseif has_value(el.classes, 'file') then
+         if FORMAT == 'ms' then
+            table.insert(el.content, 1, pandoc.RawInline('ms', '\\F[C]'))
+            table.insert(el.content, pandoc.RawInline('ms', '\\F[]'))
+         elseif FORMAT == 'context' then
+            -- table.insert(el.content, 1, pandoc.RawInline('context', '{\\bi '))
+            -- table.insert(el.content, pandoc.RawInline('context', '}'))
+            io.write ('Format \"', FORMAT, '\" file unimplemented.\n')
+         elseif FORMAT == 'latex' then
+            -- table.insert(el.content, 1, pandoc.RawInline('latex', '\\textbf{\\emph{'))
+            -- table.insert(el.content, pandoc.RawInline('latex', '}}'))
+            io.write ('Format \"', FORMAT, '\" file unimplemented.\n')
+         elseif FORMAT == 'html' then
+            table.insert(el.content, 1, pandoc.RawInline('html', '<code>'))
+            table.insert(el.content, pandoc.RawInline('html', '</code>'))
+         else
+            io.write('Format \"', FORMAT, '\" file unimplemented.\n')
+         end
+      elseif has_value(el.classes, 'cmd') then
+         if FORMAT == 'ms' then
+            table.insert(el.content, 1, pandoc.RawInline('ms', '\\f[CB]'))
+            table.insert(el.content, pandoc.RawInline('ms', '\\fP'))
+         elseif FORMAT == 'context' then
+            -- table.insert(el.content, 1, pandoc.RawInline('context', '{\\bi '))
+            -- table.insert(el.content, pandoc.RawInline('context', '}'))
+            io.write ('Format \"', FORMAT, '\" file unimplemented.\n')
+         elseif FORMAT == 'latex' then
+            -- table.insert(el.content, 1, pandoc.RawInline('latex', '\\textbf{\\emph{'))
+            -- table.insert(el.content, pandoc.RawInline('latex', '}}'))
+            io.write ('Format \"', FORMAT, '\" file unimplemented.\n')
+         elseif FORMAT == 'html' then
+            table.insert(el.content, 1, pandoc.RawInline('html', '<b><code>'))
+            table.insert(el.content, pandoc.RawInline('html', '</code></b>'))
+         else
+            io.write('Format \"', FORMAT, '\" file unimplemented.\n')
+         end
+      elseif has_value(el.classes, 'app') then
+         if FORMAT == 'ms' then
+            table.insert(el.content, 1, pandoc.RawInline('ms', '\\f[BI]'))
+            table.insert(el.content, pandoc.RawInline('ms', '\\fP'))
+         elseif FORMAT == 'context' then
+            io.write ('Hit app in context\n')
+            table.insert(el.content, 1, pandoc.RawInline('context', '{\\bi '))
+            table.insert(el.content, pandoc.RawInline('context', '}'))
+         elseif FORMAT == 'latex' then
+            table.insert(el.content, 1, pandoc.RawInline('latex', '\\textbf{\\textit{'))
+            table.insert(el.content, pandoc.RawInline('latex', '}}'))
+         elseif FORMAT == 'html' then
+            table.insert(el.content, 1, pandoc.RawInline('html', '<b><i>'))
+            table.insert(el.content, pandoc.RawInline('html', '</i></b>'))
+         else
+            io.write('Format \"', FORMAT, '\" file unimplemented.\n')
+         end
+      end
    end
    return el
 end -- Span
