@@ -8,16 +8,21 @@
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
   <link rel="stylesheet" href="epub.css" />
-  <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-  <![endif]-->
 </head>
 <body>
 <header id="title-block-header">
@@ -654,7 +659,7 @@ skill named “Melee Combat.”</p>
 <col style="width: 18%" />
 </colgroup>
 <thead>
-<tr class="header">
+<tr>
 <th></th>
 <th><strong>Might Skills</strong></th>
 <th><strong>Agility Skills</strong></th>
@@ -663,105 +668,105 @@ skill named “Melee Combat.”</p>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>All Genres</strong></td>
 <td>Brawling†</td>
 <td>Athletics</td>
 <td>Athletics</td>
 <td>Command</td>
 </tr>
-<tr class="even">
+<tr>
 <td></td>
 <td>Knife†</td>
 <td>Dodge†</td>
 <td>Language</td>
 <td>Courage</td>
 </tr>
-<tr class="odd">
+<tr>
 <td></td>
 <td>Lift</td>
 <td>Pickpocket</td>
 <td>Medicine</td>
 <td>Diplomacy</td>
 </tr>
-<tr class="even">
+<tr>
 <td></td>
 <td>Mace†</td>
 <td>Stealth</td>
 <td>Pick Locks</td>
 <td>Persuasion</td>
 </tr>
-<tr class="odd">
+<tr>
 <td></td>
 <td>Stamina</td>
 <td>Throwing†</td>
 <td>Search</td>
 <td>Seduce</td>
 </tr>
-<tr class="even">
+<tr>
 <td></td>
 <td></td>
 <td></td>
 <td>Tracking</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr>
 <td><strong>Modern</strong></td>
 <td></td>
 <td>BFG†</td>
 <td>Computer</td>
 <td>Streetwise</td>
 </tr>
-<tr class="even">
+<tr>
 <td><strong>or Sci-fi</strong></td>
 <td></td>
 <td>Drive</td>
 <td>Navigation</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr>
 <td></td>
 <td></td>
 <td>Pilot</td>
 <td>Repair</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td></td>
 <td></td>
 <td>Pistol†</td>
 <td>Science</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr>
 <td></td>
 <td></td>
 <td>Rifle†</td>
 <td></td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td><strong>Fantasy</strong></td>
 <td>Axe†</td>
 <td>Bow†</td>
 <td>Magic</td>
 <td>Ride</td>
 </tr>
-<tr class="odd">
+<tr>
 <td></td>
 <td>Pole Arm†</td>
 <td>Crossbow†</td>
 <td></td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td></td>
 <td>Smithing</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr>
 <td></td>
 <td>Sword†</td>
 <td></td>
@@ -912,65 +917,65 @@ For anything else, beg the GM.</p>
 <col style="width: 11%" />
 </colgroup>
 <thead>
-<tr class="header">
+<tr>
 <th><strong>Weapon</strong></th>
 <th><strong>Damage</strong></th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Axe</td>
 <td>+3D</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Club</td>
 <td>+1D+1</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Hatchet</td>
 <td>+1D+1</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Halberd</td>
 <td>+3D</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Knife</td>
 <td>+1D</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Mace</td>
 <td>+1D+1</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Rapier</td>
 <td>+2D</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Staff</td>
 <td>+1D+2</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Spear</td>
 <td>+2D</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Sword</td>
 <td>+2D+2</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Sword, 2h</td>
 <td>+3D+1</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Warhammer</td>
 <td>+3D</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Bow</td>
 <td>+2D+2</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Crossbow</td>
 <td>4D+1</td>
 </tr>
@@ -983,25 +988,25 @@ For anything else, beg the GM.</p>
 <col style="width: 11%" />
 </colgroup>
 <thead>
-<tr class="header">
+<tr>
 <th><strong>Armor</strong></th>
 <th><strong>Value</strong></th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Leather</td>
 <td>+2</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Chainmail</td>
 <td>+6</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Platemail</td>
 <td>+9</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Shield</td>
 <td>+4</td>
 </tr>
@@ -1014,29 +1019,29 @@ For anything else, beg the GM.</p>
 <col style="width: 11%" />
 </colgroup>
 <thead>
-<tr class="header">
+<tr>
 <th><strong>Weapon</strong></th>
 <th><strong>Damage</strong></th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Light Pistol</td>
 <td>3D+2</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Heavy Pistol</td>
 <td>4D</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Rifle</td>
 <td>5D</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Shotgun</td>
 <td>4D+2</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>BFG</td>
 <td>6D</td>
 </tr>
@@ -1049,25 +1054,25 @@ For anything else, beg the GM.</p>
 <col style="width: 11%" />
 </colgroup>
 <thead>
-<tr class="header">
+<tr>
 <th><strong>Weapon</strong></th>
 <th><strong>Damage</strong></th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Plasma Pistol</td>
 <td>5D</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Plasma Rifle</td>
 <td>6D</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Plasma BFG</td>
 <td>7D</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Plasma Sword</td>
 <td>+4D</td>
 </tr>
@@ -1080,37 +1085,37 @@ For anything else, beg the GM.</p>
 <col style="width: 11%" />
 </colgroup>
 <thead>
-<tr class="header">
+<tr>
 <th><strong>Weapon</strong></th>
 <th><strong>(S/M/L)</strong>†</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Bow</td>
 <td>30/100/300</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Crossbow</td>
 <td>50/150/400</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>All Pistols</td>
 <td>30/100/350</td>
 </tr>
-<tr class="even">
+<tr>
 <td>All Rifles</td>
 <td>100/350/500</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Shotguns</td>
 <td>50/150/400</td>
 </tr>
-<tr class="even">
+<tr>
 <td>BFG</td>
 <td>100/400/700</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Grenades</td>
 <td>10/20/30</td>
 </tr>
@@ -1124,33 +1129,33 @@ Challenges</h2>
 target number based on the task attempted.</p>
 <table>
 <thead>
-<tr class="header">
+<tr>
 <th><strong>Difficulty</strong></th>
 <th><strong>Target Number</strong></th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Very Easy</td>
 <td>2–5</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Easy</td>
 <td>6–10</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Moderate</td>
 <td>11–15</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Difficult</td>
 <td>16–20</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Very Difficult</td>
 <td>21–30</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Heroic</td>
 <td>31+</td>
 </tr>
@@ -1200,33 +1205,33 @@ difference to their dodge and attack rolls.</p>
 <col style="width: 41%" />
 </colgroup>
 <thead>
-<tr class="header">
+<tr>
 <th><em>Scale</em></th>
 <th><em>Modifier</em></th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Character, Animals</td>
 <td>None</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Air Cycle, Car, Little Dragon, Wagon</td>
 <td>+2D/+6 to Dodge &amp; Soak</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Big Dragon, Galley, Mecha, Tank</td>
 <td>+4D/+12 to Dodge &amp; Soak</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Fighter, Light Transport, Heavy Mecha</td>
 <td>+6D/+18 to Dodge &amp; Soak</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Capital Ship, Elder God, Space Station</td>
 <td>+12D/+36 to Dodge &amp; Soak</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Mega Space Station, Planets</td>
 <td>+24D/+72 to Dodge &amp; Soak</td>
 </tr>
@@ -1283,15 +1288,15 @@ wounds.</p>
 <em>Medicine</em> skill can attempt to help others heal more quickly. A
 skill check may be made once per day for each patient treated. On a
 successful roll, the patient heals one wound level.</p>
-<table>
+<table style="width:98%;">
 <colgroup>
 <col style="width: 25%" />
-<col style="width: 25%" />
+<col style="width: 24%" />
 <col style="width: 19%" />
 <col style="width: 29%" />
 </colgroup>
 <thead>
-<tr class="header">
+<tr>
 <th><em>Wound Level</em></th>
 <th><em>Frequency (N. Healing)</em></th>
 <th><em>Might Difficulty</em></th>
@@ -1299,31 +1304,31 @@ successful roll, the patient heals one wound level.</p>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Stunned</td>
 <td>1 minute</td>
 <td>automatic</td>
 <td>Easy</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Wounded</td>
 <td>3 days</td>
 <td>6</td>
 <td>Moderate</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Severely Wounded</td>
 <td>3 days</td>
 <td>6</td>
 <td>Moderate</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Incapacitated</td>
 <td>2 weeks</td>
 <td>8</td>
 <td>Difficult</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Mortally Wounded</td>
 <td>5 weeks</td>
 <td>9</td>
@@ -1423,37 +1428,37 @@ target was wounded.</p>
 <col style="width: 47%" />
 </colgroup>
 <thead>
-<tr class="header">
+<tr>
 <th><strong>Wound Level</strong></th>
 <th><strong>Dmg Total* ≥ Res Total by:</strong></th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Unharmed</td>
 <td>0 or less</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Stunned</td>
 <td>1–3</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Wounded</td>
 <td>4–8</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Severely Wounded**</td>
 <td>4–8</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Incapacitated</td>
 <td>9–12</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Mortally Wounded</td>
 <td>13–15</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Dead</td>
 <td>16+</td>
 </tr>
@@ -1509,21 +1514,21 @@ damage is:</p>
 <col style="width: 51%" />
 </colgroup>
 <thead>
-<tr class="header">
+<tr>
 <th><em>Damage Rolled</em></th>
 <th><em>Effect</em></th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Damage Roll ≥ Body Roll</td>
 <td>Temporary Effect (one round)</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Damage Roll ≥ 2 × Body Roll</td>
 <td>Permanent Effect (repair required)</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Damage Roll ≥ 3 × Body Roll</td>
 <td>Permanent Effect (part destroyed)</td>
 </tr>
@@ -1539,21 +1544,21 @@ part is damaged.</p>
 <col style="width: 43%" />
 </colgroup>
 <thead>
-<tr class="header">
+<tr>
 <th><em>Roll 1D</em></th>
 <th><em>Effect</em></th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>1</td>
 <td>Lose 1D from Maneuverability</td>
 </tr>
-<tr class="even">
+<tr>
 <td>2–3</td>
 <td>Random System Damaged</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>4–5</td>
 <td>Structural Damage</td>
 </tr>
@@ -1594,7 +1599,7 @@ cost is determined on the following chart. The cost is based on the
 price of a new vehicle.</p>
 <table>
 <thead>
-<tr class="header">
+<tr>
 <th><em>Dice Lost</em></th>
 <th><em>Difficulty</em></th>
 <th><em>Cost</em></th>
@@ -1602,19 +1607,19 @@ price of a new vehicle.</p>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>1D</td>
 <td>Easy</td>
 <td>10%</td>
 <td>1 hour</td>
 </tr>
-<tr class="even">
+<tr>
 <td>2D</td>
 <td>Moderate</td>
 <td>15%</td>
 <td>4 hours</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>3D+</td>
 <td>Difficult</td>
 <td>20%</td>
@@ -1636,25 +1641,25 @@ chart:</p>
 <col style="width: 18%" />
 </colgroup>
 <thead>
-<tr class="header">
+<tr>
 <th><em>Speed Factor</em></th>
 <th><em>Modifier</em></th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Primitive Craft / Muscle Powered</td>
 <td>0D</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Motorized Ground / Water Craft</td>
 <td>2D</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Aircraft</td>
 <td>5D</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Spacecraft</td>
 <td>10D</td>
 </tr>
@@ -1671,33 +1676,33 @@ the needs of the individual game.</p>
 <col style="width: 79%" />
 </colgroup>
 <thead>
-<tr class="header">
+<tr>
 <th><strong>Cost</strong></th>
 <th><strong>Description</strong></th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>$</td>
 <td>Trivial cost.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>$$</td>
 <td>Affordable to most.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>$$$</td>
 <td>Affordable to the very wealthy, governments, and corps.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>$$$$</td>
 <td>Only the richest individuals, most governments.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>$$$$$</td>
 <td>Only large governments and megacorps can purchase.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>$$$$$$</td>
 <td>World governments and star empires only.</td>
 </tr>
@@ -1957,7 +1962,7 @@ below. If he fails all effort and money is wasted but no CP were
 spent.</p>
 <table>
 <thead>
-<tr class="header">
+<tr>
 <th><em>Item</em></th>
 <th><em>Cost</em></th>
 <th><em>Time</em></th>
@@ -1966,28 +1971,28 @@ spent.</p>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Cloak</td>
 <td>$$$</td>
 <td>4 weeks</td>
 <td>20</td>
 <td>30</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Crystal Ball</td>
 <td>$$$$</td>
 <td>8 weeks</td>
 <td>30</td>
 <td>35</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Magic Wand</td>
 <td>$$</td>
 <td>2 weeks</td>
 <td>10</td>
 <td>25</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Spell Staff</td>
 <td>$$$</td>
 <td>4 weeks</td>
@@ -2234,23 +2239,23 @@ determine potency:</p>
 <col style="width: 44%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr>
 <td>*</td>
 <td>Not a threat usually.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>**</td>
 <td>Minor threat only in a group.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>***</td>
 <td>Credible threat.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>****</td>
 <td>Watch out, Heroes!</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>*****</td>
 <td>Bold or foolish to even try.</td>
 </tr>
@@ -3003,33 +3008,33 @@ day a Might check is made and the level of success achieved determines
 how many BP are recovered. Healing: BP are recovered as follows:</p>
 <table>
 <thead>
-<tr class="header">
+<tr>
 <th><strong>Healing Difficulty</strong></th>
 <th><strong>BP Recovered</strong></th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Very Easy</td>
 <td>2</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Easy</td>
 <td>1D</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Moderate</td>
 <td>2D</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Difficult</td>
 <td>3D</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Very Difficult</td>
 <td>4D</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Heroic</td>
 <td>5D</td>
 </tr>
@@ -3220,7 +3225,7 @@ remaining dice as best fits the character concept.</p>
 <col style="width: 20%" />
 </colgroup>
 <thead>
-<tr class="header">
+<tr>
 <th><strong>Minimal OpenD6</strong> <strong>Equivalent</strong></th>
 <th><strong>OpenD6</strong> <strong>Fantasy</strong></th>
 <th><strong>OpenD6</strong> <strong>Adventure</strong></th>
@@ -3228,49 +3233,49 @@ remaining dice as best fits the character concept.</p>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Might</td>
 <td>Physique</td>
 <td>Physique</td>
 <td>Strength</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Agility</td>
 <td>Agility</td>
 <td>Reflexes</td>
 <td>Dexterity</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Agility</td>
 <td>Coordination</td>
 <td>Coordination</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Wit</td>
 <td>Intellect</td>
 <td>Knowledge</td>
 <td>Knowledge</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Charm</td>
 <td>Charm</td>
 <td>Presence</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr>
 <td>(Wit+Charm)/2</td>
 <td>Acumen</td>
 <td>Perception</td>
 <td>Perception</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>(Agility+Wit)/2</td>
 <td></td>
 <td></td>
 <td>Mechanical</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Wit</td>
 <td></td>
 <td></td>
@@ -3438,59 +3443,59 @@ silver, gold, and other precious ores.</p>
 <col style="width: 31%" />
 </colgroup>
 <thead>
-<tr class="header">
+<tr>
 <th><strong>From</strong></th>
 <th><strong>To</strong></th>
 <th><strong>Time</strong></th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Nomos</td>
 <td>Belt</td>
 <td>1D6 + 1 Days</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Nomos or Belt</td>
 <td>Ophion Worlds</td>
 <td>1 Week + 1D6 Days</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Nomos or Belt</td>
 <td>Lelantosian Worlds</td>
 <td>2 Weeks + 1D6 Days</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Nomos or Belt</td>
 <td>Leton Worlds</td>
 <td>3 Weeks + 1D6 Days</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Ophion Worlds</td>
 <td>Ophion Worlds</td>
 <td>1D6 Weeks</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Ophion Worlds</td>
 <td>Lelantosian Worlds</td>
 <td>1 Week + 2D6 Days</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Ophion Worlds</td>
 <td>Leton Worlds</td>
 <td>2 Weeks + 2D6 Days</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Lelantosian Worlds</td>
 <td>Lelantosian Worlds</td>
 <td>1D6 Days</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Lelantosian Worlds</td>
 <td>Leton Worlds</td>
 <td>1 Week + 3D6 Days</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Leton Worlds</td>
 <td>Leton Worlds</td>
 <td>1D6 Days</td>
@@ -4075,7 +4080,7 @@ a day.</p>
 <div class="container keep">
 <table>
 <thead>
-<tr class="header">
+<tr>
 <th> </th>
 <th><strong>Chahnae</strong></th>
 <th><strong>Drougayn</strong></th>
@@ -4091,7 +4096,7 @@ a day.</p>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td><strong>Ajada</strong></td>
 <td>11h</td>
 <td>19d 11h</td>
@@ -4105,7 +4110,7 @@ a day.</p>
 <td>1d 3h</td>
 <td>14h</td>
 </tr>
-<tr class="even">
+<tr>
 <td><strong>Chahnae</strong></td>
 <td>—</td>
 <td>12d 16h</td>
@@ -4119,7 +4124,7 @@ a day.</p>
 <td>8h</td>
 <td>16h</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><strong>Drougayn</strong></td>
 <td>—</td>
 <td>—</td>
@@ -4133,7 +4138,7 @@ a day.</p>
 <td>11d 11h</td>
 <td>7d 13h</td>
 </tr>
-<tr class="even">
+<tr>
 <td><strong>Helmar</strong></td>
 <td>—</td>
 <td>—</td>
@@ -4147,7 +4152,7 @@ a day.</p>
 <td>5d 21h</td>
 <td>10d 15h</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><strong>Kalavel</strong></td>
 <td>—</td>
 <td>—</td>
@@ -4161,7 +4166,7 @@ a day.</p>
 <td>7d 14h</td>
 <td>10d 19h</td>
 </tr>
-<tr class="even">
+<tr>
 <td><strong>Lesdin</strong></td>
 <td>—</td>
 <td>—</td>
@@ -4175,7 +4180,7 @@ a day.</p>
 <td>6d 8h</td>
 <td>7d 11h</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><strong>Peles</strong></td>
 <td>—</td>
 <td>—</td>
@@ -4189,7 +4194,7 @@ a day.</p>
 <td>10d 20h</td>
 <td>4d 6h</td>
 </tr>
-<tr class="even">
+<tr>
 <td><strong>Petrion</strong></td>
 <td>—</td>
 <td>—</td>
@@ -4203,7 +4208,7 @@ a day.</p>
 <td>3d 9h</td>
 <td>7h</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><strong>Seljan</strong></td>
 <td>—</td>
 <td>—</td>
@@ -4217,7 +4222,7 @@ a day.</p>
 <td>9d 5h</td>
 <td>13h</td>
 </tr>
-<tr class="even">
+<tr>
 <td><strong>Tauran</strong></td>
 <td>—</td>
 <td>—</td>
@@ -4231,7 +4236,7 @@ a day.</p>
 <td>20h</td>
 <td>5h</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><strong>Telmera</strong></td>
 <td>—</td>
 <td>—</td>
