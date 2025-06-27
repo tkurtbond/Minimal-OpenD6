@@ -1,0 +1,2 @@
+* Fix header line of clause 15 in the OGL, which is slightly indented.
+In both HTML, ODF, and -ms PDF.
