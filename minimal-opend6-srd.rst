@@ -1,7 +1,7 @@
-Mimimal OpenD6 System Reference Document
+Minimal OpenD6 System Reference Document
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-`Mimimal OpenD6` is a `System Reference Document`_ based on `Mini
+`Minimal OpenD6` is a `System Reference Document`_ based on `Mini
 Six`, from `AntiPaladin Games`_, used in accordance with the `Mini
 Six Standard Trademark License`_ and the `Open Game License`_ used
 with OpenD6_.
@@ -16,7 +16,7 @@ with OpenD6_.
 Definitions of Common Game Terms
 ================================
 
-`Mimimal OpenD6` wasn't written to be read from the standpoint of the
+`Minimal OpenD6` wasn't written to be read from the standpoint of the
 novice gamer; someone who's never seen a roleplaying game before.
 So, if you're lost the following definitions might prove helpful.
 
