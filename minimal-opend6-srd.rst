@@ -74,7 +74,7 @@ About this Book
 `Minimal OpenD6` is a member of the `OpenD6`_ family of games.
 It's cinematic and flexible like its parent, but its goal is to
 be lighter and faster, keeping the heart of the system's mechanics
-but streamling the rules.
+but streamlining the rules.
 
 `How to Make a Character`_ details character creation while `The
 Game Mechanics`_ and `Combat`_ provide all the needed mechanics to
@@ -107,7 +107,7 @@ several sample settings that are nearly ready to go as is.
    OpenD6` cheat sheet containing several useful charts to serve
    as a handy reference.
 
-What you won't find in ths book are a lot of detailed examples,
+What you won't find in this book are a lot of detailed examples,
 exhaustive rules to cover every possible scenario, or a large list
 of modifiers.  Instead, we are trusting GMs, with the help of
 their players, to apply common sense to make the game fun for
@@ -1068,7 +1068,7 @@ Vehicle Movement
 ----------------
 
 Move dice represent relative speed between vehicles of similar
-types.  Vehicles are divided into four broad categeries including
+types.  Vehicles are divided into four broad categories including
 Primitive Craft/Muscle Powered, Motorized Ground and Water
 Craft, Aircraft, and Spacecraft.  If vehicles of different categories
 must compare speeds, such as a fighter chasing a tank, the faster
@@ -4772,10 +4772,10 @@ The following are examples of the ships used in the galactic
 struggle.  There are many more used by the various factions, both
 aligned and unaligned.
 
-Imperial Dreadnaught
+Imperial Dreadnought
 ....................
 
-*Galaxy Class Dreadnaught*
+*Galaxy Class Dreadnought*
 
 | **Cost:** $$$$$
 | **Scale:** +12D
