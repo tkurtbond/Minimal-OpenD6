@@ -199,7 +199,7 @@ them all into a unified skill named “Melee Combat.”
 |               | **Might   | **Agility  | **Wit      | **Charm    |
 |               |  Skills** | Skills**   | Skills**   | Skills**   |
 +===============+===========+============+============+============+
-| **All         | Brawling† | Athletics  | Athletics  | Command    |
+| **All         | Brawling† | Athletics  | History    | Command    |
 | Genres**      |           |            |            |            |
 +---------------+-----------+------------+------------+------------+
 |               | Knife†    | Dodge†     | Language   | Courage    |
