@@ -988,6 +988,10 @@ is damaged.
    4–5        Structural Damage
    =========  ============================
 
+.. raw:: ms
+
+   .KS
+
 +-----------+------------------------------+
 | *Roll 1D* | *Effect*                     |
 +===========+==============================+
@@ -997,6 +1001,10 @@ is damaged.
 +-----------+------------------------------+
 | 4–5       | Structural Damage            |
 +-----------+------------------------------+
+
+.. raw:: ms
+
+   .KE
 
 Effects of Damage
 ~~~~~~~~~~~~~~~~~
@@ -1108,11 +1116,6 @@ Space is big and empty.  Guns shoot great distances and ships
 are extremely fast.  The ranges given are abstract units that are
 defined by the needs of the individual game.
 
-
-.. raw:: ms
-
-   .bp
-
 Vehicle Costs
 -------------
 
@@ -1160,7 +1163,7 @@ Vehicle Costs
 
 .. raw:: ms
 
-   .sp -2v
+   .bp
 
 Sample Fantasy Vehicles
 -----------------------
@@ -1575,7 +1578,7 @@ were spent.
 *Item*        *Cost*  *Time*   *CP*  *TN*
 ============  ======  =======  ====  ====
 Cloak         $$$     4 weeks  20    30
-Crystal Ball  $$$$    8 weeks  30    35
+Crystal Ball  \$$$$   8 weeks  30    35
 Magic Wand    $$      2 weeks  10    25
 Spell Staff   $$$     4 weeks  15    30
 ============  ======  =======  ====  ====

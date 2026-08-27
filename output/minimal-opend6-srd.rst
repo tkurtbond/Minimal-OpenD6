@@ -1,7 +1,7 @@
-Mimimal OpenD6 System Reference Document
+Minimal OpenD6 System Reference Document
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-`Mimimal OpenD6` is a `System Reference Document`_ based on `Mini
+`Minimal OpenD6` is a `System Reference Document`_ based on `Mini
 Six`, from `AntiPaladin Games`_, used in accordance with the `Mini
 Six Standard Trademark License`_ and the `Open Game License`_ used
 with OpenD6_.
@@ -16,7 +16,7 @@ with OpenD6_.
 Definitions of Common Game Terms
 ================================
 
-`Mimimal OpenD6` wasn't written to be read from the standpoint of the
+`Minimal OpenD6` wasn't written to be read from the standpoint of the
 novice gamer; someone who's never seen a roleplaying game before.
 So, if you're lost the following definitions might prove helpful.
 
@@ -74,7 +74,7 @@ About this Book
 `Minimal OpenD6` is a member of the `OpenD6`_ family of games.
 It's cinematic and flexible like its parent, but its goal is to
 be lighter and faster, keeping the heart of the system's mechanics
-but streamling the rules.
+but streamlining the rules.
 
 `How to Make a Character`_ details character creation while `The
 Game Mechanics`_ and `Combat`_ provide all the needed mechanics to
@@ -107,7 +107,7 @@ several sample settings that are nearly ready to go as is.
    OpenD6` cheat sheet containing several useful charts to serve
    as a handy reference.
 
-What you won't find in ths book are a lot of detailed examples,
+What you won't find in this book are a lot of detailed examples,
 exhaustive rules to cover every possible scenario, or a large list
 of modifiers.  Instead, we are trusting GMs, with the help of
 their players, to apply common sense to make the game fun for
@@ -199,7 +199,7 @@ them all into a unified skill named “Melee Combat.”
 |               | **Might   | **Agility  | **Wit      | **Charm    |
 |               |  Skills** | Skills**   | Skills**   | Skills**   |
 +===============+===========+============+============+============+
-| **All         | Brawling† | Athletics  | Athletics  | Command    |
+| **All         | Brawling† | Athletics  | History    | Command    |
 | Genres**      |           |            |            |            |
 +---------------+-----------+------------+------------+------------+
 |               | Knife†    | Dodge†     | Language   | Courage    |
@@ -988,6 +988,10 @@ is damaged.
    4–5        Structural Damage
    =========  ============================
 
+.. raw:: ms
+
+   .KS
+
 +-----------+------------------------------+
 | *Roll 1D* | *Effect*                     |
 +===========+==============================+
@@ -997,6 +1001,10 @@ is damaged.
 +-----------+------------------------------+
 | 4–5       | Structural Damage            |
 +-----------+------------------------------+
+
+.. raw:: ms
+
+   .KE
 
 Effects of Damage
 ~~~~~~~~~~~~~~~~~
@@ -1068,7 +1076,7 @@ Vehicle Movement
 ----------------
 
 Move dice represent relative speed between vehicles of similar
-types.  Vehicles are divided into four broad categeries including
+types.  Vehicles are divided into four broad categories including
 Primitive Craft/Muscle Powered, Motorized Ground and Water
 Craft, Aircraft, and Spacecraft.  If vehicles of different categories
 must compare speeds, such as a fighter chasing a tank, the faster
@@ -1107,11 +1115,6 @@ Weapon Ranges in Space
 Space is big and empty.  Guns shoot great distances and ships
 are extremely fast.  The ranges given are abstract units that are
 defined by the needs of the individual game.
-
-
-.. raw:: ms
-
-   .bp
 
 Vehicle Costs
 -------------
@@ -1160,7 +1163,7 @@ Vehicle Costs
 
 .. raw:: ms
 
-   .sp -2v
+   .bp
 
 Sample Fantasy Vehicles
 -----------------------
@@ -1575,7 +1578,7 @@ were spent.
 *Item*        *Cost*  *Time*   *CP*  *TN*
 ============  ======  =======  ====  ====
 Cloak         $$$     4 weeks  20    30
-Crystal Ball  $$$$    8 weeks  30    35
+Crystal Ball  \$$$$   8 weeks  30    35
 Magic Wand    $$      2 weeks  10    25
 Spell Staff   $$$     4 weeks  15    30
 ============  ======  =======  ====  ====
@@ -4772,10 +4775,10 @@ The following are examples of the ships used in the galactic
 struggle.  There are many more used by the various factions, both
 aligned and unaligned.
 
-Imperial Dreadnaught
+Imperial Dreadnought
 ....................
 
-*Galaxy Class Dreadnaught*
+*Galaxy Class Dreadnought*
 
 | **Cost:** $$$$$
 | **Scale:** +12D

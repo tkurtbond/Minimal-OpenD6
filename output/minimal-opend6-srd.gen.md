@@ -1,6 +1,6 @@
-# Mimimal OpenD6 System Reference Document
+# Minimal OpenD6 System Reference Document
 
-[Mimimal OpenD6]{.title-ref} is a [System Reference
+[Minimal OpenD6]{.title-ref} is a [System Reference
 Document](https://en.wikipedia.org/wiki/System_Reference_Document) based
 on [Mini Six]{.title-ref}, from [AntiPaladin
 Games](http://www.antipaladingames.com/), used in accordance with the
@@ -11,7 +11,7 @@ used with [OpenD6](https://opend6.fandom.com/wiki/OpenD6).
 
 ## Definitions of Common Game Terms
 
-[Mimimal OpenD6]{.title-ref} wasn\'t written to be read from the
+[Minimal OpenD6]{.title-ref} wasn\'t written to be read from the
 standpoint of the novice gamer; someone who\'s never seen a roleplaying
 game before. So, if you\'re lost the following definitions might prove
 helpful.
@@ -70,8 +70,8 @@ on circumstances.
 [Minimal OpenD6]{.title-ref} is a member of the
 [OpenD6](https://opend6.fandom.com/wiki/OpenD6) family of games. It\'s
 cinematic and flexible like its parent, but its goal is to be lighter
-and faster, keeping the heart of the system\'s mechanics but streamling
-the rules.
+and faster, keeping the heart of the system\'s mechanics but
+streamlining the rules.
 
 [How to Make a Character](#how-to-make-a-character) details character
 creation while [The Game Mechanics](#the-game-mechanics) and
@@ -92,7 +92,7 @@ materials to their [Minimal OpenD6]{.title-ref} games. In [Sample
 Settings](#sample-settings) you will find several sample settings that
 are nearly ready to go as is.
 
-What you won\'t find in ths book are a lot of detailed examples,
+What you won\'t find in this book are a lot of detailed examples,
 exhaustive rules to cover every possible scenario, or a large list of
 modifiers. Instead, we are trusting GMs, with the help of their players,
 to apply common sense to make the game fun for everyone. Don\'t slow the
@@ -137,11 +137,11 @@ scale of 1D to 4D, although perks may change these limits. When putting
 dice into each attribute you can put whole dice in each or use a mixture
 of whole dice and pips.
 
--   **Might** represents physical strength, toughness, and amount of
-    damage dealt when striking unarmed.
--   **Agility** represents aim and coordination.
--   **Wit** represents mental creativity and intelligence.
--   **Charm** represents charisma, resolve, and leadership.
+- **Might** represents physical strength, toughness, and amount of
+  damage dealt when striking unarmed.
+- **Agility** represents aim and coordination.
+- **Wit** represents mental creativity and intelligence.
+- **Charm** represents charisma, resolve, and leadership.
 
 ### Skills
 
@@ -177,7 +177,7 @@ skill named "Melee Combat."
                   **Might     **Agility    **Wit        **Charm
                   Skills**    Skills**     Skills**     Skills**
   --------------- ----------- ------------ ------------ ------------
-  **All Genres**  Brawling†   Athletics    Athletics    Command
+  **All Genres**  Brawling†   Athletics    History      Command
 
                   Knife†      Dodge†       Language     Courage
 
@@ -611,15 +611,15 @@ Characters start with 1 hero point and may spend it before any roll.
 Hero Points provide a variety of options, but once spent the point is
 lost:
 
--   Gaining a +6 to any single roll (up to 3 points may be used at one
-    time when using this effect).
--   Just a flesh wound. Once per combat a hero point can be used to
-    reduce the severity of a character\'s wounds one level.
--   Make a small change to their location (locating an unlocked window,
-    finding a can of WD40 and a roll of duct tape, etc).
--   "Buy" a clue. Sometimes players are at a lost or think they might
-    have missed something. This gives them the option to find that
-    detail that they would have otherwise missed.
+- Gaining a +6 to any single roll (up to 3 points may be used at one
+  time when using this effect).
+- Just a flesh wound. Once per combat a hero point can be used to reduce
+  the severity of a character\'s wounds one level.
+- Make a small change to their location (locating an unlocked window,
+  finding a can of WD40 and a roll of duct tape, etc).
+- "Buy" a clue. Sometimes players are at a lost or think they might have
+  missed something. This gives them the option to find that detail that
+  they would have otherwise missed.
 
 Hero Points are earned through superior play and given as an incentive
 by the GM to help encourage the style of action desired in a game. If
@@ -884,6 +884,9 @@ Once the severity of the damage is determined the GM may roll randomly
 on the following chart or use common sense to determine which part is
 damaged.
 
+```{=ms}
+.KS
+```
   ------------------------------------------
   *Roll 1D*   *Effect*
   ----------- ------------------------------
@@ -894,6 +897,9 @@ damaged.
   4--5        Structural Damage
   ------------------------------------------
 
+```{=ms}
+.KE
+```
 #### Effects of Damage
 
 **Maneuverability:** Each time this is affected the vehicle loses 1D.
@@ -953,7 +959,7 @@ price of a new vehicle.
 ### Vehicle Movement
 
 Move dice represent relative speed between vehicles of similar types.
-Vehicles are divided into four broad categeries including Primitive
+Vehicles are divided into four broad categories including Primitive
 Craft/Muscle Powered, Motorized Ground and Water Craft, Aircraft, and
 Spacecraft. If vehicles of different categories must compare speeds,
 such as a fighter chasing a tank, the faster vehicle is granted bonus
@@ -978,9 +984,6 @@ Space is big and empty. Guns shoot great distances and ships are
 extremely fast. The ranges given are abstract units that are defined by
 the needs of the individual game.
 
-```{=ms}
-.bp
-```
 ### Vehicle Costs
 
 ```{=ms}
@@ -1012,7 +1015,7 @@ the needs of the individual game.
 .nr VS \n[old_VS]u
 ```
 ```{=ms}
-.sp -2v
+.bp
 ```
 ### Sample Fantasy Vehicles
 
@@ -2524,13 +2527,13 @@ By changing the number of attribute dice the feel of play is altered.
 The following chart provides guidelines for total attribute dice to use
 based on the power scale of the game:
 
--   8 dice = The common man.
--   9 dice = Experienced. Well trained in their specialty.
--   10 dice = Competent. A cut above John Q Public.
--   11 dice = Veteran. Easily stands out from the rest.
--   12 dice = Heroic. The default level of play.
--   13 dice = World Class. Has an edge in most everything.
--   14+ dice = Legendary characters. Herculean in nature.
+- 8 dice = The common man.
+- 9 dice = Experienced. Well trained in their specialty.
+- 10 dice = Competent. A cut above John Q Public.
+- 11 dice = Veteran. Easily stands out from the rest.
+- 12 dice = Heroic. The default level of play.
+- 13 dice = World Class. Has an edge in most everything.
+- 14+ dice = Legendary characters. Herculean in nature.
 
 ### Expanded Number of Attributes
 
@@ -3023,12 +3026,12 @@ three possible effects based on GM fiat:
 ```
 ### Options Used by Traditional OpenD6
 
--   Traditional OpenD6 Combat
--   Traditional OpenD6 Hero Points
--   Traditional OpenD6 Character Points
--   Traditional OpenD6 Might Damage
--   Perks are called Advantages
--   Complications are called Disadvantages
+- Traditional OpenD6 Combat
+- Traditional OpenD6 Hero Points
+- Traditional OpenD6 Character Points
+- Traditional OpenD6 Might Damage
+- Perks are called Advantages
+- Complications are called Disadvantages
 
 ```{=ms}
 .bp
@@ -3087,13 +3090,12 @@ Price](#higher-attributes-at-a-price)).
 
 ##### Skill List
 
--   **Might:** Brawling, Melee Weapons, Lift, Stamina
--   **Agility:** Athletics, BFG, Bow, Dodge, Drive, Pickpocket, Pilot,
-    Pistol, Rifle, Stealth, Throwing
--   **Wit:** Computer, History, Language, Medicine, Navigation, Repair,
-    Science, Security, Tracking
--   **Charm:** Command, Diplomacy, Persuasion, Riding, Seduce,
-    Streetwise
+- **Might:** Brawling, Melee Weapons, Lift, Stamina
+- **Agility:** Athletics, BFG, Bow, Dodge, Drive, Pickpocket, Pilot,
+  Pistol, Rifle, Stealth, Throwing
+- **Wit:** Computer, History, Language, Medicine, Navigation, Repair,
+  Science, Security, Tracking
+- **Charm:** Command, Diplomacy, Persuasion, Riding, Seduce, Streetwise
 
 ##### New Complications
 
@@ -3461,12 +3463,11 @@ and claim them.
 
 ##### Skill List
 
--   **Might:** Axe/Mace, Brawling, Knife, Lift, Smithing, Stamina, Pole
-    Arm, Sword
--   **Agility:** Athletics, Bow, Dodge, Pickpocket, Stealth, Throwing
--   **Wit:** Crafts, Lore, Magic, Medicine, Pick Locks, Search, Tracking
--   **Charm:** Command, Diplomacy, Persuasion, Riding, Seduce,
-    Streetwise
+- **Might:** Axe/Mace, Brawling, Knife, Lift, Smithing, Stamina, Pole
+  Arm, Sword
+- **Agility:** Athletics, Bow, Dodge, Pickpocket, Stealth, Throwing
+- **Wit:** Crafts, Lore, Magic, Medicine, Pick Locks, Search, Tracking
+- **Charm:** Command, Diplomacy, Persuasion, Riding, Seduce, Streetwise
 
 ##### New Perks
 
@@ -3690,14 +3691,14 @@ related to selecting it.
 
 ##### Skill List
 
--   **Might:** Athletics, Brawling, Lift, Melee, Plasma Sword, Stamina,
-    Swimming
--   **Agility:** BFG, Dodge, Drive, Pilot, Pistol, Rifle, Stealth,
-    Throwing
--   **Wit:** Computers/Androids, Cultures, Demolitions, Gunnery,
-    Languages, History, Magic, Medicine, Navigation, Repair, Science,
-    Search, Security, Star Systems, Tracking
--   **Charm:** Command, Courage, Diplomacy, Gambling, Seduce, Streetwise
+- **Might:** Athletics, Brawling, Lift, Melee, Plasma Sword, Stamina,
+  Swimming
+- **Agility:** BFG, Dodge, Drive, Pilot, Pistol, Rifle, Stealth,
+  Throwing
+- **Wit:** Computers/Androids, Cultures, Demolitions, Gunnery,
+  Languages, History, Magic, Medicine, Navigation, Repair, Science,
+  Search, Security, Star Systems, Tracking
+- **Charm:** Command, Courage, Diplomacy, Gambling, Seduce, Streetwise
 
 ##### New Perks
 
@@ -4163,9 +4164,9 @@ The following are examples of the ships used in the galactic struggle.
 There are many more used by the various factions, both aligned and
 unaligned.
 
-##### Imperial Dreadnaught
+##### Imperial Dreadnought
 
-*Galaxy Class Dreadnaught*
+*Galaxy Class Dreadnought*
 
 | **Cost:** \$\$\$\$\$
 | **Scale:** +12D
