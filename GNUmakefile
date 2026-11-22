@@ -24,7 +24,7 @@
 # how to extend this makefile for other fonts for use with ConTeXt.
 FONTFAMILY=palatino
 
-PANDOC=pandoc
+PANDOC ?= pandoc
 PANDOCOPTS=
 
 OUT=output/
