@@ -327,26 +327,26 @@ CONTEXTSETUP=-V fontsize=10pt -V whitespace=quarterline -V setupitemize='before=
 # formats do not let tables float, and the text is written with that
 # expection.  Maybe some day.
 $(OUT)%.ctx.pdf : %.rst
-	pandoc -s -r rst -w context --lua-filter=general.lua \
+	$(PANDOC) -s -r rst -w context --lua-filter=general.lua \
 		-V location=force -V number-figures=no -V number-tables=no \
 		--template=tkb $(CONTEXTFONTS) \
 		$(FLOAT) $(CONTEXTSETUP) $(PANDOCOPTS) \
 		--output=$@ $<
 $(OUT)%.gen.ctx : %.rst
-	pandoc -s -r rst -w context --lua-filter=general.lua \
+	$(PANDOC) -s -r rst -w context --lua-filter=general.lua \
 		-V location=force -V number-figures=no -V number-tables=no \
 		--template=tkb $(CONTEXTFONTS) \
 		$(FLOAT) $(CONTEXTSETUP) $(PANDOCOPTS) \
 		--output=$@ $<
 
 $(OUT)%.stmt.ctx.pdf : %.rst
-	pandoc -s -r rst -w context --lua-filter=general.lua \
+	$(PANDOC) -s -r rst -w context --lua-filter=general.lua \
 		-V location=force -V number-figures=no -V number-tables=no \
 		--template=statement $(CONTEXTFONTS) \
 		$(FLOAT) $(CONTEXTSETUP) $(PANDOCOPTS) \
 		--output=$@ $<
 $(OUT)%.stmt.gen.ctx : %.rst
-	pandoc -s -r rst -w context --lua-filter=general.lua \
+	$(PANDOC) -s -r rst -w context --lua-filter=general.lua \
 		-V location=force -V number-figures=no -V number-tables=no \
 		--template=statement $(CONTEXTFONTS) \
 		$(FLOAT) $(CONTEXTSETUP) $(PANDOCOPTS) \
