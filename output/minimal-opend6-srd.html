@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc 3.10" />
+  <meta name="generator" content="pandoc 3.14" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>Minimal OpenD6 System Reference Document</title>
   <style>
@@ -10,6 +10,12 @@
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
     */
     span.smallcaps{font-variant: small-caps;}
+    em, em em em, em em em em em {
+      font-style: italic;
+    }
+    em em, em em em em {
+      font-style: normal;
+    }
     div.columns{display: flex; gap: 1.5em;}
     div.column{flex: auto;}
     @media screen {
@@ -26,8 +32,27 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
-  </style>
+    @media print {
+      html {
+        color-scheme: light only;
+      }
+      html, body, pre, code {
+        background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
+        color: black;
+      }
+      pre, code {
+        padding: 0;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }  </style>
   <link rel="stylesheet" href="epub.css" />
 </head>
 <body>
@@ -916,7 +941,7 @@ death.</p>
 they allocated dice to during character creation. For example a pistol
 for the <em>Pistol</em> skill, a medic bag for <em>Medicine</em>, etc.
 For anything else, beg the GM.</p>
-<table style="width:33%;">
+<table style="width:32%;">
 <caption><strong>Low Tech Weapons</strong></caption>
 <colgroup>
 <col style="width: 21%" />
@@ -987,7 +1012,7 @@ For anything else, beg the GM.</p>
 </tr>
 </tbody>
 </table>
-<table style="width:33%;">
+<table style="width:32%;">
 <caption><strong>Low Tech Armor</strong></caption>
 <colgroup>
 <col style="width: 21%" />
@@ -1018,7 +1043,7 @@ For anything else, beg the GM.</p>
 </tr>
 </tbody>
 </table>
-<table style="width:33%;">
+<table style="width:32%;">
 <caption><strong>Modern Tech Weapons</strong></caption>
 <colgroup>
 <col style="width: 21%" />
@@ -1053,7 +1078,7 @@ For anything else, beg the GM.</p>
 </tr>
 </tbody>
 </table>
-<table style="width:33%;">
+<table style="width:32%;">
 <caption><strong>Sci-Fi Tech Weapons</strong></caption>
 <colgroup>
 <col style="width: 21%" />
@@ -1084,7 +1109,7 @@ For anything else, beg the GM.</p>
 </tr>
 </tbody>
 </table>
-<table style="width:33%;">
+<table style="width:32%;">
 <caption><strong>Missile Weapon Ranges</strong></caption>
 <colgroup>
 <col style="width: 21%" />
@@ -1544,7 +1569,7 @@ damage is:</p>
 <p>Once the severity of the damage is determined the GM may roll
 randomly on the following chart or use common sense to determine which
 part is damaged.</p>
-<table style="width:60%;">
+<table style="width:59%;">
 <colgroup>
 <col style="width: 16%" />
 <col style="width: 43%" />
@@ -1641,7 +1666,7 @@ Spacecraft. If vehicles of different categories must compare speeds,
 such as a fighter chasing a tank, the faster vehicle is granted bonus
 move dice based on the difference in speed factors in the following
 chart:</p>
-<table style="width:67%;">
+<table style="width:66%;">
 <colgroup>
 <col style="width: 48%" />
 <col style="width: 18%" />
@@ -4565,7 +4590,7 @@ Cannons (5D+1/ea), Ion Pulse Cannon (4D)</div>
 <p>The following text is the property of Wizards of the Coast, Inc. and
 is Copyright 2000 Wizards of the Coast, Inc (“Wizards”). All Rights
 Reserved.</p>
-<p>1. Definitions: (a) ”Contributors” means the copyright and/or
+<p>1. Definitions: (a) “Contributors” means the copyright and/or
 trademark owners who have contributed Open Game Content; (b) “Derivative
 Material” means copyrighted material including derivative works and
 translations (including into other computer languages), potation,

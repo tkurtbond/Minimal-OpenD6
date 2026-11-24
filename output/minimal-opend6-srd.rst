@@ -4946,7 +4946,7 @@ The following text is the property of Wizards of the Coast, Inc. and
 is Copyright 2000 Wizards of the Coast, Inc (“Wizards”).  All Rights
 Reserved.
 
-1. Definitions: (a) ”Contributors” means the copyright and/or
+1. Definitions: (a) “Contributors” means the copyright and/or
 trademark owners who have contributed Open Game Content; (b)
 “Derivative Material” means copyrighted material including derivative
 works and translations (including into other computer languages),
